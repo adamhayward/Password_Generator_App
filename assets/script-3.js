@@ -1,11 +1,13 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var charset =[];
 var charSetUp = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var charSetLow = "abcdefghijklmnopqrstuvwxyz";
 var charSetSpecial = "!@#$%^&*()_-+=;/?.,><";
 var charSetNum = 1234567890;
 
-// Write password to the #password input
+// Function Assignments
+// "writePassword" funciton defined
 function writePassword() {
     //prompt for first question (lenght of password?)
     //stores user's input in the var chosenLenght
@@ -67,10 +69,24 @@ function writePassword() {
     var passwordText = document.querySelector("#password");
     //sets the var "passwordText" value equal to var "password"
     passwordText.value = password;
+}
+// "generatePassword" fucntion defined
+function generatePassword() {
+    // states what to do if only var "charSetUp is true"
+    if (charSetUp === true, charSetLow === false, charSetSpecial === false, charSetNum === false) {
+        /*states that the index will increase with one random characters chosen from charset
+        until the the index reaches the same lenght as the user selected*/
+        for (i = 0; i < chosenLength; i++) {
+            //sets each each index to a random whole number inside the charset chosen 
+            var iRandom = Math.floor(Math.random() * charSetUp.length);
+
+        /* not sure how to get info presented in the #password element of html
+        needing to creating all posibilities inside this funciton for user input 
+        then app shoudl work. */
+        }
+    }
 
 }
-
-
 //responds by running the "writePassword" function when the gernate button is clicked
 generateBtn.addEventListener("click", writePassword);
 

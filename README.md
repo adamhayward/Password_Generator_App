@@ -4,6 +4,8 @@
 
 This is a simple web application designed to generate a random password for a user based on certian criteria provided by the user. 
 
+(App is unsuccessful at this current time)
+
 ## Functions
 
 Upon clicking the generate button, the user will be prompted with choices to include the password's lenght which character sets the password will include. 
