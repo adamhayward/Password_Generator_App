@@ -12,7 +12,7 @@
 This is a simple application designed to generate a password at random based on user's input critieria.
 
 ## Installation Instructions
-Simply load in broweser and hit the **Generate Password** button to begin.
+Simply [Click Here](https://adamhayward.github.io/Password_Generator_App/) to load app inside your broweser and hit the **Generate Password** button to begin.
 
 ## Usage
 The application's primary use is to quickly generate long and complex passwords for a user to use quickly.
