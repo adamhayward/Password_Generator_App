@@ -1,6 +1,6 @@
 // Assignment Code
 var generateBtn = $('#generate');
-var passWord = [];
+var charSet = [];
 var charSetUp = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var charSetLow = 'abcdefghijklmnopqrstuvwxyz';
 var charSetSpecial = '!@#$%^&*()_-+=;/?.,><';
@@ -69,18 +69,23 @@ function promptUser() {
     generatePassword();
 
     function generatePassword() {
-        
-        
-
-        for (var i = 0; i < passWord.length; i++) {
-            passWord[i].push(chosenLength.value);
-          }
-        console.log(passWord.length);
-        if (upperCaseChar && !lowerCaseChar && !specialChar && !numChar) {
-            $('#password').append(passWord);
+        if (upperCaseChar) {
+            charSet.push(charSetUp);
+        } if (lowerCaseChar) {
+            charSet.push(charSetLow);
+        } if (specialChar) {
+            charSet.push(charSetSpecial);
+        } if (numChar) {
+            charSet.push(charSetNum);
         };
 
+        var password = charSet.join("");
+        console.log(password);
     };
+
+    if (upperCaseChar && !lowerCaseChar && !specialChar && !numChar) {
+        $('#password').append(passWord);
+    };ß
 }
 
 
