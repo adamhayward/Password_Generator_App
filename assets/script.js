@@ -6,7 +6,7 @@ const charSetLow = 'abcdefghijklmnopqrstuvwxyz';
 const charSetSpecial = '!@#$%^&*()_-+=;/?.,><';
 const charSetNum = 1234567890;
 
-let passWord;
+let passWord =[];
 let charSet = [];
 
 
@@ -92,11 +92,14 @@ function promptUser() {
         for (var i = 0; i < chosenLength; i++) {
             // Math object methods to choose random character stored in the 'charSet' array
             var password = placeHodlerArray[Math.floor(Math.random() * placeHodlerArray.length)];
-            passWord = passWord.join; 
+            toString(password); 
+            console.log(password);
+            passWord.push(password);
             console.log(passWord);
+           
+        };
 
-        }
-        console.log(passWord.length);
+        
         $('#password').append(passWord);
     };
 
