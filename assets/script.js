@@ -1,21 +1,23 @@
 // Assignment Code
-var generateBtn = $('#generate');
-var passWord
-var charSet = [];
-var charSetUp = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-var charSetLow = 'abcdefghijklmnopqrstuvwxyz';
-var charSetSpecial = '!@#$%^&*()_-+=;/?.,><';
-var charSetNum = 1234567890;
+const generateBtn = $('#generate');
+
+const charSetUp = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const charSetLow = 'abcdefghijklmnopqrstuvwxyz';
+const charSetSpecial = '!@#$%^&*()_-+=;/?.,><';
+const charSetNum = 1234567890;
+
+let passWord;
+let charSet = [];
 
 
-generateBtn.on('click', function () {
-    charSet.splice(0, charSet.lenght);
+generateBtn.on('click', function (event) {
+    event.preventDefault();
     promptUser();
-})
+});
 
 
 function promptUser() {
-    
+
 
     var chosenLength;
     var upperCaseChar;
@@ -85,20 +87,22 @@ function promptUser() {
         } if (numChar) {
             charSet.push(charSetNum);
         };
-        passWord = charSet.join("");
-        for(var i = 0; i < charSet.length; i++){
-            passWord.length = chosenLength.value;
+        let placeHodlerArray = charSet.join("");
+        // for loop settting lenght of password to the user's chosen length
+        for (var i = 0; i < chosenLength; i++) {
+            // Math object methods to choose random character stored in the 'charSet' array
+            var password = placeHodlerArray[Math.floor(Math.random() * placeHodlerArray.length)];
+            passWord = passWord.join; 
+            console.log(passWord);
+
         }
-        
-        passWord.toString;
-       
-        console.log(passWord);
-        $('#password').append(passWord.length);
+        console.log(passWord.length);
+        $('#password').append(passWord);
     };
 
-   
-        
- 
+
+
+
 }
 
 
