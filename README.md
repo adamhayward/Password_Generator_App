@@ -1,37 +1,35 @@
 # Password Generator App
+### Table of Contents 
+- [Description](#Description "check out a brief description & demo of the app") 
+- [Installation Instructions](#InstallationInstructions "how to install the app") 
+- [Usage](#Usage "intended use") 
+- [Contribution Guidelines](#ContributionGuidelines "requirements to contribute to project") 
+- [Testing Proceedures](#TestingProceedures "instructions on how to test the app") 
+- [Licenses Required](#LicensesRequired "license requirements") 
+- [Questions](#Questions "ask the developer") 
 
-## Summary
+## Description
+This is a simple application designed to generate a password at random based on user's input critieria.
 
-This is a simple web application designed to generate a random password for a user based on certian criteria provided by the user. 
+## Installation Instructions
+Simply load in broweser and hit the **Generate Password** button to begin.
 
-(App is unsuccessful at this current time)
+## Usage
+The application's primary use is to quickly generate long and complex passwords for a user to use quickly.
 
-## Functions
+## Contribution Guidelines
+Please clone from the GitHub repo.
 
-Upon clicking the generate button, the user will be prompted with choices to include the password's lenght which character sets the password will include. 
+## Testing Proceedures
+N/A
 
-After each prompt selection the user is alerted with their choice.
+## Licenses Required
+This is an open source app
 
-After all prompts are answered the user is provided a password meeting criteria the user selected.
+## Questions
+If there are any questions realted to the application, the user is 
 
-## Features
+encouraged to vistit the creator's GitHub, at: https://github.com/adamhayward,
 
-App will provide a password lenth between 8-124 characters based on user's input.
-
-Users can choose weather the password generated will include the following character sets:
-
-- Upper case letters
-- Lower case letters
-- Special characters
-- Numerical characters 
-
-## Deliverables
-
- Website URL: [url](https://adamhayward.github.io/Password_Generator_App/)
-
- Website screen shots:
- Home Page [screenshot](./assets/images/home-page.png)
-
- 
-
-
+or to contact the developer directy via email, at: a.hayward11@gmail.com.
+   
