@@ -1,5 +1,6 @@
 // Assignment Code
 var generateBtn = $('#generate');
+var passWord
 var charSet = [];
 var charSetUp = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var charSetLow = 'abcdefghijklmnopqrstuvwxyz';
@@ -7,9 +8,15 @@ var charSetSpecial = '!@#$%^&*()_-+=;/?.,><';
 var charSetNum = 1234567890;
 
 
-generateBtn.on("click", promptUser);
+generateBtn.on('click', function () {
+    charSet.splice(0, charSet.lenght);
+    promptUser();
+})
+
 
 function promptUser() {
+    
+
     var chosenLength;
     var upperCaseChar;
     var lowerCaseChar;
@@ -78,14 +85,20 @@ function promptUser() {
         } if (numChar) {
             charSet.push(charSetNum);
         };
-
-        var password = charSet.join("");
-        console.log(password);
+        passWord = charSet.join("");
+        for(var i = 0; i < charSet.length; i++){
+            passWord.length = chosenLength.value;
+        }
+        
+        passWord.toString;
+       
+        console.log(passWord);
+        $('#password').append(passWord.length);
     };
 
-    if (upperCaseChar && !lowerCaseChar && !specialChar && !numChar) {
-        $('#password').append(passWord);
-    };ß
+   
+        
+ 
 }
 
 
