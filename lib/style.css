@@ -1,136 +1,195 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html, body,
-.wrapper {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,500;1,500&display=swap");
 
 body {
-  font-family: sans-serif;
-  background-color: #f9fbfd;
+  font-family: "Archivo Narrow", sans-serif;
+  letter-spacing: 2.5px;
+  text-shadow: lightgray 0px 3px 3px;
 }
 
 .wrapper {
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-top: 50px;
 }
 
-header {
-  text-align: center;
-  padding: 20px;
-  padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+h2 {
+  color: #007bff;
+  letter-spacing: 7.5px;
+  text-shadow: rgb(149, 149, 149) 0px 5px 4px;
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 5px;
+  background-image: url(./images/app-background.png);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: 50px;
   border-width: 1px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  box-shadow: darkgray 0px 8px 18px 10px;
   color: hsl(206, 17%, 28%);
   font-size: 18px;
-  margin: 0 auto;
-  max-width: 800px;
+  max-width: 900px;
   padding: 30px 40px;
 }
 
-.card-header::after {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
-}
-
-.card-body {
-  min-height: 100px;
-}
-
-.card-footer {
+.range {
+  position: relative;
+  left: 10%;
+  height: 80px;
+  width: 80%;
+  padding: 0 65px 0 45px;
   text-align: center;
 }
 
-.card-footer::before {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
-}
-
-.card-footer::after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-.btn {
-  border: none;
-  background-color: hsl(360, 91%, 36%);
-  border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
-  color: hsl(0, 0%, 100%);
-  display: inline-block;
-  font-size: 22px;
-  line-height: 22px;
-  margin: 16px 16px 16px 20px;
-  padding: 14px 34px;
-  text-align: center;
+input {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 90%;
+  border-radius: 50%;
   cursor: pointer;
 }
 
-button[disabled] {
-  cursor: default;
-  background: #c0c7cf;
+.option {
+  display: flex;
+  position: relative;
+  left: 20px;
 }
 
-.float-right {
-  float: right;
-}
-
-#password {
+.switch {
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
+  content: "OFF";
+  width: 150px;
+  height: 24px;
+  background-image: linear-gradient( 45deg, lightgray, white);
+  border: 1px solid lightgray;
+  border-radius: 50px;
+  outline: none;
+  cursor: pointer;
+}
+
+.switch:checked {
+  background-image: linear-gradient(45deg,#a2cfff, #007bff);
+  border: 1px solid #007bff;
+}
+
+.switch::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  width: 48px;
+  height: 48px;
+  background-image: linear-gradient(135deg, #a2cfff,#007bff);
+  border: 1px solid #999;
+  border-radius: 50%;
+  box-shadow: -1.5px 2px 7px 2.5px darkgray;
+}
+
+.switch::after {
+  content: "ON";
+  margin: -2px 0px 0px 8px;
+  color: white;
+}
+
+.switch:checked::before {
+  right: 0;
+  box-shadow: 1.5px 3px 7px 2.5px darkgray;
+}
+
+.generate {
+  margin: 75px 0px 0px 5%;
+  box-shadow: 0px 0px 8px 2px darkgray;
+  background-image: linear-gradient(135deg, #a2cfff,#007bff,#a2cfff);
+  border-radius: 50px;
+  width: 90%;
+  height: auto;
+  min-height: 80px;
+  color: #fff;
+  font-size: 30px;
+  letter-spacing: 10px;
+  text-shadow: 0px 2px 8px darkslategray;
+}
+
+.generated {
+  box-shadow: none;
+  outline: none;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.6), #007bff50, #007bff75, rgba(255, 255, 255, 0.95));
+  height: auto;
+  letter-spacing: 4px;
+  text-shadow: 0px 2px 8px darkslategray;
+}
+.generate:hover {
+  box-shadow: 0px 0px 8px 1px darkgray;
+  color: white;
+}
+
+.generated:hover {
+  box-shadow: none;
+}
+
+#_ABC,
+#aaa {
+  position: relative;
+  top: 5px;
+  left: 75px;
+}
+
+#abc,
+#_123 {
+  position: relative;
+  top: 25px;
+  left: 75px;
+}
+#upChar,
+#specChar {
+  position: relative;
+  top: 10px;
+}
+
+#lowChar,
+#numChar {
+  position: relative;
+  top: 25px;
+}
+
+.copy,
+.clear {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
   border: none;
-  display: block;
-  width: 100%;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 85px;
-  font-size: 1.2rem;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
-  border-radius: 6px;
-  resize: none;
-  overflow: hidden;
+  outline: none;
+  border-radius: 50px;
+  box-shadow: 0px 0px 8px 2px lightgray;
 }
 
-@media (max-width: 690px) {
-  .btn {
-    font-size: 1rem;
-    margin: 16px 0px 0px 0px;
-    padding: 10px 15px;
-  }
-
-  #password {
-    font-size: 1rem;
-  }
+.copy {
+  top: 48%;
+  left: 94.5%;
+  background-image: url(images/copy.png);
+  width: 55px;
+  height: 55px;
 }
 
-@media (max-width: 500px) {
-  .btn {
-    font-size: 0.8rem;
-  }
+.copy:hover {
+  top: 49%;
+}
+
+.clear {
+  top: 85%;
+  left: 93%;
+  background-image: url(images/trashCan.png);
+  width: 40px;
+  height: 40px;
+}
+
+.clear:hover {
+  top: 86%;
+}
+
+.copy:hover,
+.clear:hover {
+  box-shadow: 0px 0px 4px 1px lightgray;
+  outline: none;
 }
