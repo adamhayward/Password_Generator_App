@@ -1,12 +1,4 @@
 # Password Generator App
-### Table of Contents 
-- [Description](#Description "check out a brief description & demo of the app") 
-- [Installation Instructions](#InstallationInstructions "how to install the app") 
-- [Usage](#Usage "intended use") 
-- [Contribution Guidelines](#ContributionGuidelines "requirements to contribute to project") 
-- [Testing Proceedures](#TestingProceedures "instructions on how to test the app") 
-- [Licenses Required](#LicensesRequired "license requirements") 
-- [Questions](#Questions "ask the developer") 
 
 ## Description
 This simple application is built to generate a random password with the length, character type, and character cases all customizable by the user.∏
